@@ -210,6 +210,55 @@ footer{
     
 }
 
+.results-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.desktop-results img, .mobile-results img{
+    max-width: 100%;
+    height: auto;
+    display: block; /* Sørger for at bildene ikke har ekstra plass under seg */
+    margin-bottom: 20px; /* Gir litt plass mellom bildene på mobile enheter */
+}
+
+ .UU-mobile-results img, .UU-desktop-results img{
+    max-width: 100%;
+    height: auto;
+    display: block; /* Sørger for at bildene ikke har ekstra plass under seg */
+    margin-bottom: 20px; /* Gir litt plass mellom bildene på mobile enheter */
+}
+.product-category {
+
+    display: flex; /* Aktiverer flexbox på kategoribeholderen */
+    flex-wrap: wrap; /* Lar produkter flyte til neste linje om nødvendig */
+    gap: 20px; /* Dette skal gi et mellomrom på 20px mellom elementene */
+    padding: 20px;
+    margin-bottom: 40px; 
+  }
+  .product-category h2 {
+    width: 100%; /* Sørger for at overskriften tar hele bredden */
+    margin-bottom: 10px;
+  }
+
+  .product {
+    flex: 1; /* Gjør at alle produktene forsøker å fylle like mye plass */
+    min-width: calc((100% / 3) - 20px); /* Setter minimumsbredde med hensyn til gap */
+    box-shadow: 0 2px 5px rgba(77, 136, 72, 0.1);
+  }
+
+  .product img {
+    width: 100%; /* Sørger for at bildene er full bredde av sin container */
+    height: auto; /* Holder bildene proporsjonale */
+    display: block; /* Forhindrer at noen ekstra plass vises under bildet */
+    
+  }
+
+  .price {
+    font-size: 1rem; /* Juster størrelsen på prisen som du vil */
+    text-align: center; /* Sentrerer pris teksten */
+    margin-top: 5px; /* Litt plass over prisen */
+  }
 
 
 
@@ -423,7 +472,61 @@ footer{
             font-size: large;
             margin-left: 290px;
         }
+        .seo-results {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start; /* Dette sørger for at artiklene starter på samme nivå på tvers */
+            flex-wrap: wrap; /* Sørger for at elementene går ned til neste linje om det ikke er nok plass */
+          }
 
+          .seo-results article, .UU-results article {
+            flex: 1; /* Gir artiklene fleksibilitet til å utvide og krympe */
+            margin: 10px; /* Legger til litt plass rundt hvert element */
+            max-width: calc(50% - 20px); /* Setter maksimal bredde til 50% minus margin */
+          }
+          .seo-results img {
+            width: 100%; /* Sørger for at bildene tar full bredde av artikkelen */
+            height: auto; /* Beholder bildets originale proporsjoner */
+          }
+          #seo-h2{
+           font-size: larger;
+           font-weight: 200;
+           font: bold;
+        }
+        .uu-results {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start; /* Dette sørger for at artiklene starter på samme nivå på tvers */
+            flex-wrap: wrap; /* Sørger for at elementene går ned til neste linje om det ikke er nok plass */
+          }
+          
+          .UU-results article {
+            flex: 1; /* Gir artiklene fleksibilitet til å utvide og krympe */
+            margin: 10px; /* Legger til litt plass rundt hvert element */
+            max-width: calc(50% - 20px); /* Setter maksimal bredde til 50% minus margin */
+          }
+          .UU-mobile-results img, .UU-desktop-results img{
+            max-width: 100%;
+            height: auto;
+            display: block; /* Sørger for at bildene ikke har ekstra plass under seg */
+            margin-bottom: 20px; /* Gir litt plass mellom bildene på mobile enheter */
+        }
+
+        .product-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+          }
+        .product-category {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+          }
+          .product {
+            width: calc(50% - 1rem); /* Trekker fra padding/margin for å unngå wrap */
+            margin-bottom: 40px;
+          }
+        
 
     }
 
